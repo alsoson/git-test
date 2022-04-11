@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 75%;
+      margin: auto;
+    }
+
+    #navbar {
+      background-color: #000;
+      color: white;
+      overflow: hidden;
+
+      position: fixed;
+      top: 0;
+      width: 100%;
+
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    }
+
+    #navbar .logo,
+    #navbar .menu,
+    #navbar .search {
+      line-height: 40px;
+    }
+
+    /* logo */
+    #navbar .logo {
+      float: left;
+    }
+
+    #navbar .logo a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 2rem;
+      padding: 1rem;
+    }
+
+    /* menu */
+    #navbar .menu {
+      float: left;
+    }
+
+    #navbar .menu .menu-item {
+      display: inline-block;
+    }
+
+    #navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+      padding: 1rem;
+    }
+
+    #navbar .menu a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* search */
+    #navbar .search {
+      float: right;
+      padding: 1rem;
+      font-size: 0;
+    }
+
+    /* input、img、iframe... => replaced element(替代元素家族，它們都有自己寬、高) */
+    #navbar .search input,
+    #navbar .search button {
+      font-size: 1rem;
+      appearance: none;
+      border: none;
+      vertical-align: middle;
+    }
+
+    #navbar .search input {
+      width: 170px;
+      height: 25px;
+    }
+
+    #navbar .search button {
+      width: 50px;
+      height: 25px;
+    }
+
+    #big-img {
+      margin-top: 80px;
+    }
+
+    /* 商品推薦 */
+    #product {
+      padding: 4rem 0;
+    }
+
+    #product .title {
+      text-align: center;
+    }
+
+    #product .row .col {
+      width: 33.333333%;
+      padding: 1rem;
+      float: left;
+    }
+
+    #product .card {
+      padding: 1rem;
+      border: 1px solid #aaa;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    #product .card button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+
+    #product .card .sale {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 100px;
+    }
+
+    #product .card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    #footer {
+      text-align: center;
+      background: black;
+      color: white;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <div id="navbar">
+    <div class="container">
+      <!-- logo -->
+      <div class="logo">
+        <a href="#">LOGO</a>
+      </div>
+      <!-- menu -->
+      <ul class="menu">
+        <li class="menu-item"><a href="#">LINK</a></li>
+        <li class="menu-item"><a href="#">LINK</a></li>
+        <li class="menu-item"><a href="#">LINK</a></li>
+        <li class="menu-item"><a href="#">LINK</a></li>
+        <li class="menu-item"><a href="#">LINK</a></li>
+      </ul>
+      <!-- search -->
+      <div class="search">
+        <input type="text">
+        <button>搜尋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 大圖片 -->
+  <div id="big-img">
+    <img src="https://picsum.photos/1920/600/?random=10">
+  </div>
+
+  <!-- 商品推薦 -->
+  <div id="product" class="clearfix">
+    <div class="container">
+      <h1 class="title">商品推薦</h1>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <div class="card-body">
+              <h3>產品一</h3>
+              <p>國際反饋藥品沒想到身材一眼兩個是否全新表明監管格式次數印刷，人士水溝各位事情看不到進來整理初步本地下載，大力一定得到更是，嘉義平衡把我客人社區現場調節這一網絡美元持續建設人事不起，最初打開優點把他推出互動再度渠道神話，告訴我市政府本文意見，下面數碼相機後。</p>
+            </div>
+            <div class="card-footer">
+              <button>訂購</button>
+            </div>
+            <img class="sale" src="./sale-tag.png" alt="">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <div class="card-body">
+              <h3>產品一</h3>
+              <p>國際反饋藥品沒想到身材一眼兩個是否全新表明監管格式次數印刷，人士水溝各位事情看不到進來整理初步本地下載，大力一定得到更是，嘉義平衡把我客人社區現場調節這一網絡美元持續建設人事不起，最初打開優點把他推出互動再度渠道神話，告訴我市政府本文意見，下面數碼相機後。</p>
+            </div>
+            <div class="card-footer">
+              <button>訂購</button>
+            </div>
+            <img class="sale" src="./sale-tag.png" alt="">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <img src="https://picsum.photos/600/400/?random=10">
+            </div>
+            <div class="card-body">
+              <h3>產品一</h3>
+              <p>國際反饋藥品沒想到身材一眼兩個是否全新表明監管格式次數印刷，人士水溝各位事情看不到進來整理初步本地下載，大力一定得到更是，嘉義平衡把我客人社區現場調節這一網絡美元持續建設人事不起，最初打開優點把他推出互動再度渠道神話，告訴我市政府本文意見，下面數碼相機後。</p>
+            </div>
+            <div class="card-footer">
+              <button>訂購</button>
+            </div>
+            <img class="sale" src="./sale-tag.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <div id="footer">
+    <div class="copyright">Copyright&copy; 2022 泰山訓練場上課練習</div>
+  </div>
+</body>
+
+</html>
